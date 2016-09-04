@@ -8,6 +8,7 @@
 /.bundle
 
 Gemfile.lock
+Guardfile
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
