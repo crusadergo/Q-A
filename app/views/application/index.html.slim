@@ -1,1 +1,7 @@
-= link_to 'Задать вопрос', root_path
+- @questions.each do |q|
+  = q.title
+  br
+  = q.description
+  br
+  
+= link_to 'Задать вопрос', new_question_path
