@@ -1,12 +1,7 @@
 class QuestionsController < ApplicationController
-  def new
-    question = Question.new
-  end
 
   def create
-    article = Question.new question_params
-
-    article.save
+    Question.create question_params
     redirect_to root_path
   end
 
@@ -14,4 +9,5 @@ class QuestionsController < ApplicationController
     def question_params
       params.require(:question).permit(:title, :description)
     end
+
 end
