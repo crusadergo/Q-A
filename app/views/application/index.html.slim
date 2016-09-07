@@ -1,7 +1,9 @@
 - @questions.each do |q|
   = q.title
-  br
   = q.description
-  br
+  - q.answers.each do |a|
+    = a.text
+
+  = link_to 'Дать ответ', new_question_answer_path(q.id)
   
 = link_to 'Задать вопрос', new_question_path
