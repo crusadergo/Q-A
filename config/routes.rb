@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :questions do
     resources :answers do
+      resources :edits
+    end
   end
 
   # Example of regular route:
