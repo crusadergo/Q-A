@@ -3,6 +3,9 @@
   = q.description
   - q.answers.each do |a|
     = a.text
+    - a.corrections.each do |e|
+      = e.text
+    = link_to 'Правка', new_question_answer_correction_path(q.id, a.id)
 
   = link_to 'Дать ответ', new_question_answer_path(q.id)
   

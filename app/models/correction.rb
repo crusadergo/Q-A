@@ -1,4 +1,4 @@
-class Edit < ActiveRecord::Base
+class Correction < ActiveRecord::Base
   belongs_to :user
   belongs_to :answer
 end
